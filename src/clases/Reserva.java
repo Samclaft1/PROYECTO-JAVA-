@@ -7,24 +7,19 @@ package clases;
  */
 public class Reserva {
     private String idreserva;
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private int precio;
+    private String checkin;
+    private String checkout;
+    private String precio;
 
-    //COSNTRUCTORES
     public Reserva() {
     }
 
-    public Reserva(String idreserva, String nombre, String apellido, String correo, int precio) {
+    public Reserva(String idreserva, String checkin, String checkout, String precio) {
         this.idreserva = idreserva;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
+        this.checkin = checkin;
+        this.checkout = checkout;
         this.precio = precio;
     }
-    
-    //GETTER Y SETTERS
 
     public String getIdreserva() {
         return idreserva;
@@ -34,44 +29,36 @@ public class Reserva {
         this.idreserva = idreserva;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCheckin() {
+        return checkin;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCheckin(String checkin) {
+        this.checkin = checkin;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getCheckout() {
+        return checkout;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setCheckout(String checkout) {
+        this.checkout = checkout;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public int getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
-    
-    //TOSTRING
 
     @Override
     public String toString() {
-        return "Reserva{" + "idreserva=" + idreserva + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", precio=" + precio + '}';
+        return "Reserva{" + "idreserva=" + idreserva + ", checkin=" + checkin + ", checkout=" + checkout + ", precio=" + precio + '}';
     }
+    
+    
     
     
     
