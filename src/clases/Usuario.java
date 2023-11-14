@@ -9,7 +9,6 @@ public class Usuario {
     private String nombre;
     private String password;
 
-    //CONSTRUCTORES
     public Usuario() {
     }
 
@@ -17,8 +16,6 @@ public class Usuario {
         this.nombre = nombre;
         this.password = password;
     }
-    
-    //GETTERYSETTERS
 
     public String getNombre() {
         return nombre;
@@ -35,13 +32,15 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    //TOSTRING
 
     @Override
     public String toString() {
         return "Usuario{" + "nombre=" + nombre + ", password=" + password + '}';
     }
+    
+    
+
+  
     
     
     
