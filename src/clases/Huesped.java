@@ -10,18 +10,19 @@ public class Huesped extends Reserva {
     private String apellido;
     private String telefono;
 
-    //CONSTRUCTOR
+    //CONSTRUCTORES
     public Huesped() {
     }
 
-    public Huesped(String nombre, String apellido, String telefono, String idreserva, String checkin, String checkout, String precio) {
-        super(idreserva, checkin, checkout, precio);
+    public Huesped(String nombre, String apellido, String telefono, String idreserva, String checkin, String checkout, String precio, boolean desayuno, boolean vip, int nrocamas) {
+        super(idreserva, checkin, checkout, precio, desayuno, vip, nrocamas);
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
     }
-
+    
     //GETTER Y SETTERS
+
     public String getNombre() {
         return nombre;
     }
@@ -45,12 +46,17 @@ public class Huesped extends Reserva {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
+    
     //TO STRING
+
     @Override
     public String toString() {
         return "Huesped{" + "nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + '}';
     }
+    
+    
+     
+   
     
     
     
