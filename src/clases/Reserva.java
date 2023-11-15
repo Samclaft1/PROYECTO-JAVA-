@@ -1,108 +1,120 @@
 
 package clases;
 
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.UUID;
+
 /**
  *
  * @author scamp
  */
 public class Reserva {
-    private String idreserva;
-    private String checkin;
-    private String checkout;
-    private String precio;
-    private boolean desayuno;
-    private boolean vip;
-    private int nrocamas;
 
-    //CONSTRUCTORES
-    public Reserva() {
+    private final String idReserva;
+    private Date fechaEntrada;
+    private Date fechaSalida;
+    private BigDecimal valorReserva;
+    private String formaPago;
+
+    public Reserva(Date fechaEntrada, Date fechaSalida, BigDecimal valorReserva, String formaPago) {
+        this.idReserva = generarIdReserva();
+        this.fechaEntrada = fechaEntrada;
+        this.fechaSalida = fechaSalida;
+        this.valorReserva = valorReserva;
+        this.formaPago = formaPago;
     }
 
-    public Reserva(String idreserva, String checkin, String checkout, String precio, boolean desayuno, boolean vip, int nrocamas) {
-        this.idreserva = idreserva;
-        this.checkin = checkin;
-        this.checkout = checkout;
-        this.precio = precio;
-        this.desayuno = desayuno;
-        this.vip = vip;
-        this.nrocamas = nrocamas;
-    }
-    
-    //GETTER Y SETTERS
-
-    public String getIdreserva() {
-        return idreserva;
+    public Reserva(String idReserva, Date fechaEntrada, Date fechaSalida, BigDecimal valorReserva, String formaPago) {
+        this.idReserva = idReserva;
+        this.fechaEntrada = fechaEntrada;
+        this.fechaSalida = fechaSalida;
+        this.valorReserva = valorReserva;
+        this.formaPago = formaPago;
     }
 
-    public void setIdreserva(String idreserva) {
-        this.idreserva = idreserva;
+    /**
+     * @return the id_Reserva
+     */
+    public String getId_Reserva() {
+        return idReserva;
     }
 
-    public String getCheckin() {
-        return checkin;
+    /**
+     * @return the fechaEntrada
+     */
+    public Date getFechaEntrada() {
+        return fechaEntrada;
     }
 
-    public void setCheckin(String checkin) {
-        this.checkin = checkin;
+    /**
+     * @param fechaEntrada the fechaEntrada to set
+     */
+    public void setFechaEntrada(Date fechaEntrada) {
+        this.fechaEntrada = fechaEntrada;
     }
 
-    public String getCheckout() {
-        return checkout;
+    /**
+     * @return the fechaSalida
+     */
+    public Date getFechaSalida() {
+        return fechaSalida;
     }
 
-    public void setCheckout(String checkout) {
-        this.checkout = checkout;
+    /**
+     * @param fechaSalida the fechaSalida to set
+     */
+    public void setFechaSalida(Date fechaSalida) {
+        this.fechaSalida = fechaSalida;
     }
 
-    public String getPrecio() {
-        return precio;
+    /**
+     * @return the totalReserva
+     */
+    public BigDecimal getValorReserva() {
+        return valorReserva;
     }
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
+    /**
+     * @param valorReserva the totalReserva to set
+     */
+    public void setValorReserva(BigDecimal valorReserva) {
+        this.valorReserva = valorReserva;
     }
 
-    public boolean isDesayuno() {
-        return desayuno;
+    /**
+     * @return the formaPago
+     */
+    public String getFormaPago() {
+        return formaPago;
     }
 
-    public void setDesayuno(boolean desayuno) {
-        this.desayuno = desayuno;
+    /**
+     * @param formaPago the formaPago to set
+     */
+    public void setFormaPago(String formaPago) {
+        this.formaPago = formaPago;
     }
 
-    public boolean isVip() {
-        return vip;
+    /**
+     * Generando ID, para ser asignado al crear el objeto
+     * en el constructor, cuando no se específique un id.
+     * 
+     * @return - ID aleatorio en base al estándar UUID. 
+     */
+    private String generarIdReserva() {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
     }
 
-    public void setVip(boolean vip) {
-        this.vip = vip;
-    }
-
-    public int getNrocamas() {
-        return nrocamas;
-    }
-
-    public void setNrocamas(int nrocamas) {
-        this.nrocamas = nrocamas;
-    }
-
-    //TO STRING
     @Override
     public String toString() {
-        return "Reserva{" + "idreserva=" + idreserva + ", checkin=" + checkin + ", checkout=" + checkout + ", precio=" + precio + ", desayuno=" + desayuno + ", vip=" + vip + ", nrocamas=" + nrocamas + '}';
+        return String.format("{ID: %s, FechaEntrada: %s, FechaSalida: %s, Total: %f, FormaPago: %s}",
+                this.idReserva,
+                this.fechaEntrada,
+                this.fechaSalida,
+                this.valorReserva,
+                this.formaPago
+        );
     }
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
 }

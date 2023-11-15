@@ -1,18 +1,31 @@
 
 package vista;
 
+import clases.Usuario;
+import controlador.UsuarioC;
+
 /**
  *
  * @author scamp
  */
 public class Login extends javax.swing.JFrame {
 
+    
+    int xMouse;
+    int yMouse;
+    private static Usuario usuario;
+    private final UsuarioC usuarioC;
+
     /**
      * Creates new form Vista
      */
     public Login() {
         initComponents();
+        this.usuarioC = new UsuarioC();
+        configurarColoresComponentes();
+        
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -194,4 +207,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    private void configurarColoresComponentes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
