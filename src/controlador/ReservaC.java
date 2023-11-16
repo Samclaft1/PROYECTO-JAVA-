@@ -24,6 +24,36 @@ public class ReservaC {
         this.con = con;
     }
     
+    // Devuelve un listado de todas las reservas en la Base de Datos.
+    
+     public List<Reserva> listar() {
+        List<Reserva> listarReservas = new ArrayList<>();
+        try {
+            String sql = "SELECT id_reserva, fecha_entrada, fecha_salida, valor, forma_pago "
+                    + "FROM reservas";
+            try ( PreparedStatement preparedStatement = con.prepareStatement(sql);) {
+                preparedStatement.execute();
+                ResultSet resultSet = preparedStatement.getResultSet();
+                while (resultSet.next()) {
+                    Reserva fila = new Reserva(
+                            resultSet.getString("ID_RESERVA"),
+                            resultSet.getDate("FECHA_ENTRADA"),
+                            resultSet.getDate("FECHA_SALIDA"),
+                            resultSet.getBigDecimal("VALOR"),
+                            resultSet.getString("FORMA_PAGO")
+                    );
+                    listarReservas.add(fila);
+                }
+                return listarReservas;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+     
+     //Ejecuta una sentencia oracle con parámetro LIKE, recibiendo el idReserva
+
+    
     public List<Reserva> listar(String idReserva) {
         List<Reserva> listaReservas = new ArrayList<>();
         String sql = "SELECT\n"
@@ -58,6 +88,8 @@ public class ReservaC {
         }
     }
     
+    // Permite almacenar el modelo de datos de Reserva, en la tabla reservas
+    
     public void guardar(Reserva reserva) {
         try {
             String sql = "INSERT INTO reservas (id_reserva, fecha_entrada, fecha_salida, valor, forma_pago) "
@@ -82,6 +114,8 @@ public class ReservaC {
             throw new RuntimeException(e);
         }
     }
+    
+    //Permite actualizar el registro en la Base de Datos
     
     public int actualizar(String idReserva, Date fechaEntrada,
             Date fechaSalida, double valorReserva, String formaPago) {

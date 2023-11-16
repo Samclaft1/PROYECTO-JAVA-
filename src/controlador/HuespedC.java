@@ -23,6 +23,8 @@ public class HuespedC {
         this.con = con;
     
     }
+    
+    //Ejecuta una sentencia SELECT en oracle de todos los húespedes.
 
     public List<Huesped> listar() {
         List<Huesped> listaHuespedes = new ArrayList<>();
@@ -56,6 +58,8 @@ public class HuespedC {
             throw new RuntimeException(e);
         }
     }
+    
+     //Ejecuta una sentencia oracle con parámetro LIKE, recibiendo el apellido
     
     
     public List<Huesped> listar(String apellido) {
