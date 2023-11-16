@@ -1,4 +1,4 @@
-
+ 
 package controlador;
 
 import clases.Usuario;
@@ -26,6 +26,9 @@ public class UsuarioC {
     public UsuarioC() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    
+     // Ejecuta una sentencia SELECT en ORACLE de todos los Usuarios.
     
     public List<Usuario> listar() {
         List<Usuario> listarUsuarios = new ArrayList<>();
@@ -55,6 +58,8 @@ public class UsuarioC {
             throw new RuntimeException(e);
         }
     }
+    
+     //Ejecuta una sentencia oracle con parámetro LIKE, recibiendo el nombre del usuario
     
     public List<Usuario> listar(String categoriaUsuario) {
         List<Usuario> listaUsuarios = new ArrayList<>();
@@ -88,6 +93,8 @@ public class UsuarioC {
         }
     }
     
+    //Método para consultar la categoría del usuario acorde al usuario y contraseña
+    
     public List<Usuario> listar(String nombreUsuario, String password) {
         List<Usuario> listaUsuarios = new ArrayList<>();
         try {
@@ -119,6 +126,8 @@ public class UsuarioC {
         }
     }
     
+    //Permite almacenar el modelo de datos de Usuario en la tabla usuarios
+    
      public void guardar(Usuario usuario) {
         try {
             String sql = "INSERT INTO usuarios (nombre_usuario, categoria_usuario, password)"
@@ -142,6 +151,8 @@ public class UsuarioC {
         }
     }
      
+     //Realiza la actualización de los valores del usuario en la base de datos.
+     
      public int actualizar(Integer idUsuario, String nombreUsuario, String categoriaUsuario, String password) {
         try {
             String sql = "UPDATE usuarios "
@@ -161,6 +172,8 @@ public class UsuarioC {
             throw new RuntimeException(e);
         }
     }
+     
+     // Ejecuta una sentencia DELETE en el registro del usuario.
      
      public int eliminar(Integer idUsuario) {
         try {

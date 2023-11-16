@@ -10,11 +10,10 @@ import controlador.UsuarioC;
  */
 public class Login extends javax.swing.JFrame {
 
-    
-    int xMouse;
-    int yMouse;
-    private static Usuario usuario;
     private final UsuarioC usuarioC;
+
+    
+    
 
     /**
      * Creates new form Vista
