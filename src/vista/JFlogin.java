@@ -29,10 +29,9 @@ public class JFlogin extends javax.swing.JFrame {
 
         jPanel1_Background = new javax.swing.JPanel();
         jPanel2_Logo = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel3_User = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel4_LogIn = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -49,9 +48,9 @@ public class JFlogin extends javax.swing.JFrame {
         jPanel2_Logo.setBackground(new java.awt.Color(245, 237, 214));
         jPanel2_Logo.setLayout(new java.awt.BorderLayout());
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LogoDiamond.png"))); // NOI18N
-        jPanel2_Logo.add(jLabel4, java.awt.BorderLayout.CENTER);
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo-black.png"))); // NOI18N
+        jPanel2_Logo.add(jLabel6, java.awt.BorderLayout.CENTER);
 
         jPanel3_User.setBackground(new java.awt.Color(0, 51, 0));
 
@@ -60,30 +59,21 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(245, 237, 214));
         jLabel1.setText("Inicio de sesion ");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconUser92x92.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel3_UserLayout = new javax.swing.GroupLayout(jPanel3_User);
         jPanel3_User.setLayout(jPanel3_UserLayout);
         jPanel3_UserLayout.setHorizontalGroup(
             jPanel3_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3_UserLayout.createSequentialGroup()
-                .addGroup(jPanel3_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3_UserLayout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel3_UserLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(jLabel5)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36))
         );
         jPanel3_UserLayout.setVerticalGroup(
             jPanel3_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3_UserLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
-                .addGap(70, 70, 70)
-                .addComponent(jLabel5)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
 
         jPanel4_LogIn.setBackground(new java.awt.Color(0, 51, 0));
@@ -216,8 +206,7 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1_Background;
     private javax.swing.JPanel jPanel2_Logo;
     private javax.swing.JPanel jPanel3_User;
