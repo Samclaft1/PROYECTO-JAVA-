@@ -1,5 +1,5 @@
 
-package controlador;
+package dao;
 
 import clases.Huesped;
 import java.sql.Connection;
@@ -15,11 +15,11 @@ import javax.swing.JOptionPane;
  *
  * @author scamp
  */
-public class HuespedC {
+public class HuespedD {
     
     private final Connection con;
 
-    public HuespedC(Connection con) {
+    public HuespedD(Connection con) {
         this.con = con;
     
     }

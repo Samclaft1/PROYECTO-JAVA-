@@ -1,5 +1,5 @@
  
-package controlador;
+package dao;
 
 import clases.Usuario;
 import java.sql.Connection;
@@ -15,15 +15,15 @@ import javax.swing.JOptionPane;
  *
  * @author scamp
  */
-public class UsuarioC {
+public class UsuarioD {
     
     private final Connection con;
 
-    public UsuarioC(Connection con) {
+    public UsuarioD(Connection con) {
         this.con = con;
     }
 
-    public UsuarioC() {
+    public UsuarioD() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

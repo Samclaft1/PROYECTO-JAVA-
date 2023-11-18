@@ -1,5 +1,5 @@
 
-package controlador;
+package dao;
 
 import clases.Reserva;
 import java.sql.Connection;
@@ -16,11 +16,11 @@ import javax.swing.JOptionPane;
  *
  * @author scamp
  */
-public class ReservaC {
+public class ReservaD {
     
     private final Connection con;
 
-    public ReservaC(Connection con) {
+    public ReservaD(Connection con) {
         this.con = con;
     }
     
