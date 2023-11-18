@@ -1,17 +1,28 @@
 
 package vista;
 
+import controlador.UsuarioC;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author scamp
  */
 public class JFlogin extends javax.swing.JFrame {
 
+    
+    
+    
+    
+
     /**
      * Creates new form JFlogin
      */
-    public JFlogin() {
+    public JFlogin() throws Exception {
         initComponents();
+        
+        
     }
 
     /**
@@ -38,7 +49,7 @@ public class JFlogin extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1_Background.setBackground(new java.awt.Color(0, 51, 0));
 
@@ -156,7 +167,7 @@ public class JFlogin extends javax.swing.JFrame {
                     .addGroup(jPanel1_BackgroundLayout.createSequentialGroup()
                         .addComponent(jPanel3_User, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(jPanel4_LogIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel4_LogIn, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)))
         );
         jPanel1_BackgroundLayout.setVerticalGroup(
             jPanel1_BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +180,7 @@ public class JFlogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 800));
+        getContentPane().add(jPanel1_Background);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -219,7 +230,11 @@ public class JFlogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new JFlogin().setVisible(true);
+            try {
+                new JFlogin().setVisible(true);
+            } catch (Exception ex) {
+                Logger.getLogger(JFlogin.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
     }
 
@@ -237,4 +252,8 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private void configurarColoresComponentes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
