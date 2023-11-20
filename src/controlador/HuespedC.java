@@ -41,7 +41,5 @@ public class HuespedC {
         return huespedD.eliminar(idHuesped, idReserva);
     }
      
-    
-    
-    
+     
 }
