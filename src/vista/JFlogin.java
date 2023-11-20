@@ -45,7 +45,6 @@ public class JFlogin extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
@@ -62,18 +61,18 @@ public class JFlogin extends javax.swing.JFrame {
         jPanel3_User.setBackground(new java.awt.Color(0, 51, 0));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Inicio de sesion ");
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario");
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña");
 
@@ -103,8 +102,6 @@ public class JFlogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-usuario-masculino-en-círculo-96.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel3_UserLayout = new javax.swing.GroupLayout(jPanel3_User);
         jPanel3_User.setLayout(jPanel3_UserLayout);
         jPanel3_UserLayout.setHorizontalGroup(
@@ -126,9 +123,6 @@ public class JFlogin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                                 .addComponent(jButton2))))
                     .addGroup(jPanel3_UserLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3_UserLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -138,9 +132,7 @@ public class JFlogin extends javax.swing.JFrame {
             .addGroup(jPanel3_UserLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(95, 95, 95)
+                .addGap(247, 247, 247)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,7 +229,6 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1_Background;
     private javax.swing.JPanel jPanel2_Logo;
