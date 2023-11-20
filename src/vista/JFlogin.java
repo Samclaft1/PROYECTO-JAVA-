@@ -1,17 +1,28 @@
 
 package vista;
 
+import controlador.UsuarioC;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author scamp
  */
 public class JFlogin extends javax.swing.JFrame {
 
+    
+    
+    
+    
+
     /**
      * Creates new form JFlogin
      */
-    public JFlogin() {
+    public JFlogin() throws Exception {
         initComponents();
+        
+        
     }
 
     /**
@@ -38,7 +49,7 @@ public class JFlogin extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1_Background.setBackground(new java.awt.Color(0, 51, 0));
 
@@ -110,6 +121,12 @@ public class JFlogin extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel4_LogIn.add(jTextField1, gridBagConstraints);
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
@@ -118,12 +135,22 @@ public class JFlogin extends javax.swing.JFrame {
         jPanel4_LogIn.add(jPasswordField1, gridBagConstraints);
 
         jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
         gridBagConstraints.gridy = 10;
         jPanel4_LogIn.add(jButton1, gridBagConstraints);
 
         jButton2.setText("Ingresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
         gridBagConstraints.gridy = 8;
@@ -140,7 +167,7 @@ public class JFlogin extends javax.swing.JFrame {
                     .addGroup(jPanel1_BackgroundLayout.createSequentialGroup()
                         .addComponent(jPanel3_User, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(jPanel4_LogIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel4_LogIn, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)))
         );
         jPanel1_BackgroundLayout.setVerticalGroup(
             jPanel1_BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +180,7 @@ public class JFlogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 800));
+        getContentPane().add(jPanel1_Background);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,6 +188,18 @@ public class JFlogin extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +230,11 @@ public class JFlogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new JFlogin().setVisible(true);
+            try {
+                new JFlogin().setVisible(true);
+            } catch (Exception ex) {
+                Logger.getLogger(JFlogin.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
     }
 
@@ -209,4 +252,8 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private void configurarColoresComponentes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
